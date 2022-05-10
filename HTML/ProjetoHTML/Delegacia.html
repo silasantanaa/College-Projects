@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocorrência</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body">
+    <div class="box"> 
+        <form action="">
+            <fieldset class="fieldset">
+                <legend class="legend"><b>Fórmulário Delegacia</b></legend>
+                <h2>Boletim de Ocorrência</h2>
+                <br>
+                <div class="inputBox">
+                    <label for="nome">Nome completo</label>
+                    <br>
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" name="email" id="email" class="inputUser" required>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <label for="nome">Telefone</label>
+                    <br>
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <label for="nome">Modelo do Smartphone</label>
+                    <br>
+                    <input type="text" name="modelo" id="modelo" class="inputUser" required>
+                </div>
+                <br>
+                <p>Sexo:</p>
+                <input type="radio" id="feminino" nome="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <br>
+                <input type="radio" id="masculino" nome="genero" value="masculino" required>
+                <label for="Masculino">Masculino</label>
+                <br><br>
+                <label for="data_nascimento"><b>Data da Ocorrência</b></label>
+                <input type="date" name="data_ocorrencia" id="data_ocorrencia" required>
+                <br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

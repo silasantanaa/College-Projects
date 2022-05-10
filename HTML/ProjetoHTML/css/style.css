@@ -1,0 +1,18 @@
+.legend{
+    border: 1px solid;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.fieldset{
+    border: 3px solid;
+}
+
+.inputUser{
+    font-style: italic;
+}
+
+.inputBox{
+    position: relative;
+}

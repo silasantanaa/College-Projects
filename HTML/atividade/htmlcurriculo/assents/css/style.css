@@ -1,0 +1,16 @@
+.titulo{
+    font-style: italic;
+    color: mediumslateblue;
+}
+
+body{
+    background-color: bisque;
+}
+
+img{
+    border-radius: 50%;
+    max-width: 200px;
+    border: 1px solid black;
+    float: right;
+    
+}
