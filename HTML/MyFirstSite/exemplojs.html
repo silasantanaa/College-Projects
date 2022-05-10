@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo JS</title>
+</head>
+<body>
+
+    <label for="assunto">Assunto</label>
+    <input type="text" name="assunto" id="assunto">
+    <button onclick="add()">Incluir</button>
+    <ul id="lista"></ul>
+    <script>
+        var listaDeAssuntos = []
+
+        function add(){
+            
+            //var assunto = campo.value
+            var assunto = document.getElementById("lista")
+            var assunto = document.getElementById("assunto").value
+            
+            listaDeAssuntos.push(assunto)
+            console.log(listaDeAssuntos)
+
+            
+        }
+
+    </script>
+
+   
+    
+</body>
+</html>

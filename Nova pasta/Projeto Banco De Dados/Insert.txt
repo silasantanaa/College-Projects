@@ -1,0 +1,76 @@
+CRIMINOSO
+
+insert into criminoso ( id_criminoso, cpf, nome)
+VALUES (1, 62927861706, 'Tiago Elias Antonio Lopes');
+
+insert into criminoso ( id_criminoso, cpf, nome)
+VALUES (2, 99608682061, 'Daniel Nathan Lucca Silva');
+
+insert into criminoso ( id_criminoso, cpf, nome)
+VALUES (3, 06790124780, 'Marcos Juan João Araújo');
+
+VITIMA
+
+insert into vitima (id_vitima, cpf, nome, telefone)
+VALUES (1, 70294636412, 'Renan Thales Pinto', '(34) 99750-3944');
+
+insert into vitima (id_vitima, cpf, nome, telefone)
+VALUES (2, 50783956363, 'Nicolas Luiz da Rosa', '(79) 2792-2128');
+
+insert into vitima (id_vitima, cpf, nome, telefone)
+VALUES (3, 26466190900, 'Lavínia Tereza Flávia Martins', '(87) 3632-7944');
+
+CRIME
+
+INSERT INTO CRIME (id_crime, dataa, descricao, logradouro, bairro, cidade, estado)
+VALUES (1, '20/11/2021' , 'assaltou uma senhora com uma arma de fogo', '49051-030', 'Suíssa', 'Aracaju', 'SE');
+
+INSERT INTO CRIME (id_crime, dataa, descricao, logradouro, bairro, cidade, estado)
+VALUES (2, '15/05/2010', 'furto de uma bicicleta', '68926-076', 'Daniel', 'Santana', 'AP');
+
+INSERT INTO CRIME (id_crime, dataa, descricao, logradouro, bairro, cidade, estado)
+VALUES (3, '25/03/2021', 'Porte ilegal de arma', '57082-180', 'Santa Lúcia', 'Maceió', 'AL');
+
+ARMA
+
+INSERT into arma (id_arma, fabricante, calibre, modelo, id_crime)
+VALUES (1, 'taurus', '38', 'Revolver', 1);
+
+INSERT INTO arma (id_arma, id_crime)
+VALUES (2, 2)
+
+INSERT INTO arma (id_arma, fabricante, calibre, modelo, id_crime)
+VALUES (3, 'Colts Company', '.45', 'Pistola', 3);
+
+COMETE
+
+insert into comete (id_crime, id_criminoso)
+VALUES (1, 1);
+
+insert into comete (id_crime, id_criminoso)
+VALUES (2, 2);
+
+insert into comete (id_crime, id_criminoso)
+VALUES (3, 3);
+
+UTILIZA
+
+insert into utiliza (id_criminoso, id_arma)
+VALUES (1, 1);
+
+insert into utiliza (id_criminoso, id_arma)
+VALUES (2, 2);
+
+insert into utiliza (id_criminoso, id_arma)
+VALUES (3, 3);
+
+ATACA
+
+INSERT INTO ataca (id_vitima, id_criminoso)
+VALUES (1, 1);
+
+INSERT INTO ataca (id_vitima, id_criminoso)
+VALUES (2, 2);
+
+INSERT INTO ataca (id_vitima, id_criminoso)
+VALUES (3, 3);

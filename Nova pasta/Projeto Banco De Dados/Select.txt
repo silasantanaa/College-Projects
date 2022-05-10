@@ -1,0 +1,22 @@
+SELECT * FROM vitima;
+
+SELECT * FROM criminoso;
+
+SELECT * FROM arma;
+
+SELECT A.nome, A.cpf, B.fabricante, B.calibre, B.modelo 
+from criminoso a, arma B
+WHERE A.id_criminoso = B.id_crime
+
+
+SELECT a.nome, B.descricao, c.nome, D.modelo, D.fabricante, D.calibre
+from criminoso A, crime B, vitima C, arma D
+WHERE A.id_criminoso = B.id_crime
+and a.id_criminoso = c.id_vitima
+and a.id_criminoso = D.id_arma
+AND a.id_criminoso = D.id_arma
+
+SELECT A.nome, A.cpf, B.dataa, B.descricao, B.logradouro, B.bairro, B.cidade, B.estado, c.fabricante, c.calibre, c.modelo 
+from criminoso a, crime B, arma c
+WHERE A.id_criminoso = c.id_crime
+AND A.id_criminoso = B.id_crime;

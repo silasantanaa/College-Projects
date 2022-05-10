@@ -1,0 +1,58 @@
+CREATE DATABASE delegacia;
+
+CREATE TABLE criminoso (
+  id_criminoso int NOT NULL,
+  cpf VARCHAR(11) NOT NULL,
+  nome VARCHAR(40) NOT NULL,
+  PRIMARY KEY (id_criminoso)
+);
+
+CREATE TABLE crime (
+  id_crime int NOT NULL,
+  dataa varchar(15) NOT NULL,
+  descricao varchar(250) NOT NULL,
+  logradouro VARCHAR(20) NOT NULL,
+  bairro VARCHAR(20) NOT NULL,
+  cidade VARCHAR(20) NOT NULL,
+  estado VARCHAR(20) NOT NULL,
+  PRIMARY KEY (id_crime)
+  );
+     
+CREATE TABLE vitima (
+ id_vitima int NOT NULL,
+ cpf VARCHAR(11) NOT NULL,
+ nome VARCHAR(40) NOT NULL,
+ telefone VARCHAR(20) NOT NULL,
+ PRIMARY KEY (id_vitima)
+ );
+
+CREATE TABLE arma (
+  id_arma int NOT NULL,
+  fabricante VARCHAR(200),
+  calibre VARCHAR(10),
+  modelo VARCHAR(20),
+  id_crime int NOT NULL,
+  PRIMARY KEY (id_arma),
+  FOREIGN KEY (id_crime) REFERENCES crime (id_crime)
+  );
+
+CREATE TABLE utiliza (
+  id_criminoso int NOT NULL,
+  id_arma int NOT NULL,
+  FOREIGN KEY (id_criminoso) REFERENCES criminoso (id_criminoso),
+  FOREIGN KEY (id_arma) REFERENCES arma (id_arma)
+  );
+
+CREATE TABLE ataca (
+  id_vitima int NOT NULL,
+  id_criminoso int NOT NULL,
+  FOREIGN KEY (id_vitima) REFERENCES vitima (id_vitima),
+  FOREIGN KEY (id_criminoso) REFERENCES criminoso (id_criminoso)
+  );
+
+CREATE TABLE comete (
+  id_crime int NOT NULL,
+  id_criminoso int NOT NULL,
+  FOREIGN KEY (id_crime) REFERENCES crime (id_crime),
+  FOREIGN KEY (id_criminoso) REFERENCES criminoso (id_criminoso)
+  );
